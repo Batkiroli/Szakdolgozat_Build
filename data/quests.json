@@ -1,0 +1,47 @@
+{
+  "rat_infestation": {
+    "name": "Patkány elszaporodás",
+    "description": "Ölj meg 10 patkányt az bányában.",
+    "completion_criteria": {
+      "type": "kill",
+      "target": "rat",
+      "required_amount": 10
+    }
+  },
+  "slime_problem": {
+    "name": "Nyálka lények",
+    "description": "Ölj meg 10 nyálkát az bányában.",
+    "completion_criteria": {
+      "type": "kill",
+      "target": "slime",
+      "required_amount": 10
+    }
+  },
+  "spider_infestation": {
+    "name": "A Pókfészek",
+    "description": "Tisztítsd meg a barlangot 15 póktól.",
+    "completion_criteria": {
+      "type": "kill",
+      "target": "spider",
+      "required_amount": 15
+    }
+  },
+  "golem_problem": {
+    "name": "Gólemek",
+    "description": "Tisztítsd meg a barlangot 10 gólemtől.",
+    "completion_criteria": {
+      "type": "kill",
+      "target": "fire_elemental",
+      "required_amount": 10
+    }
+  },
+  "boss_problem": {
+    "name": "Jeges szilánkok beszerzése",
+    "description": "A jeges szilánkok segítségével elűzhetik a bányában lévő fenevadakat.",
+    "completion_criteria": {
+      "type": "collect",
+      "target": "ice_shards",
+      "required_amount": 1
+    }
+  }
+}

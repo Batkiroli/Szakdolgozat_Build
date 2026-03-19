@@ -1,0 +1,818 @@
+{
+  "ice_shards": {
+    "name": "Jég szilánkok",
+    "description": "A bányában lévő lények eltávolításához szükséges tárgy. (De akár el is lehet adni.)",
+    "type": "misc",
+    "asset": "items/misc/ice_shards",
+    "value": 3000,
+    "weight": 5
+  },
+  "fire_shards": {
+    "name": "Tűz szilánkok",
+    "description": "Értékesíthető tűz szilánkok.",
+    "type": "misc",
+    "asset": "items/misc/fire_shards",
+    "value": 150,
+    "weight": 1
+  },
+  "spider_legs": {
+    "name": "Póklábak",
+    "description": "Értékesíthető póklábak.",
+    "type": "misc",
+    "asset": "items/misc/spider_legs",
+    "value": 35,
+    "weight": 0.5
+  },
+  "slime_ball": {
+    "name": "Nyálka golyó",
+    "description": "Értékesíthető nyálka golyó.",
+    "type": "misc",
+    "asset": "items/misc/slime_ball",
+    "value": 25,
+    "weight": 0.5
+  },
+  "rat_skin": {
+    "name": "Patkánybőr",
+    "description": "Értékesíthető patkánybőr.",
+    "type": "misc",
+    "asset": "items/misc/rat_skin",
+    "value": 20,
+    "weight": 0.5
+  },
+  "weak_health_potion": {
+    "name": "Életerő ital (Gyenge)",
+    "description": "Kisebb sebeket gyógyít.",
+    "type": "consumable",
+    "effect": "heal_hp",
+    "amount": 15,
+    "asset": "items/potions/health_potion",
+    "value": 20,
+    "weight": 0.5
+  },
+  "weak_mana_potion": {
+    "name": "Mana ital (Gyenge)",
+    "description": "Kisebb manát ad.",
+    "type": "consumable",
+    "effect": "heal_mana",
+    "amount": 15,
+    "asset": "items/potions/mana_potion",
+    "value": 20,
+    "weight": 0.5
+  },
+  "weak_stamina_potion": {
+    "name": "Állóképesség ital (Gyenge)",
+    "description": "Kisebb állóképességet ad.",
+    "type": "consumable",
+    "effect": "heal_stamina",
+    "amount": 30,
+    "asset": "items/potions/stamina_potion",
+    "value": 20,
+    "weight": 0.5
+  },
+  "health_potion": {
+    "name": "Életerő ital",
+    "description": "Sebeket gyógyít.",
+    "type": "consumable",
+    "effect": "heal_hp",
+    "amount": 30,
+    "asset": "items/potions/health_potion",
+    "value": 50,
+    "weight": 0.5
+  },
+  "mana_potion": {
+    "name": "Mana ital",
+    "description": "Manát tölt vissza.",
+    "type": "consumable",
+    "effect": "heal_mana",
+    "amount": 30,
+    "asset": "items/potions/mana_potion",
+    "value": 50,
+    "weight": 0.5
+  },
+  "stamina_potion": {
+    "name": "Állóképesség ital",
+    "description": "Állóképességet ad.",
+    "type": "consumable",
+    "effect": "heal_stamina",
+    "amount": 50,
+    "asset": "items/potions/stamina_potion",
+    "value": 50,
+    "weight": 0.5
+  },
+  "good_health_potion": {
+    "name": "Életerő ital (Jó)",
+    "description": "Sebeket gyógyít.",
+    "type": "consumable",
+    "effect": "heal_hp",
+    "amount": 80,
+    "asset": "items/potions/health_potion",
+    "value": 100,
+    "weight": 0.5
+  },
+  "good_mana_potion": {
+    "name": "Mana ital (Jó)",
+    "description": "Manát tölt vissza.",
+    "type": "consumable",
+    "effect": "heal_mana",
+    "amount": 80,
+    "asset": "items/potions/mana_potion",
+    "value": 100,
+    "weight": 0.5
+  },
+  "good_stamina_potion": {
+    "name": "Állóképesség ital (Jó)",
+    "description": "Állóképességet ad.",
+    "type": "consumable",
+    "effect": "heal_stamina",
+    "amount": 100,
+    "asset": "items/potions/stamina_potion",
+    "value": 100,
+    "weight": 0.5
+  },
+  "great_health_potion": {
+    "name": "Életerő ital (Kiváló)",
+    "description": "Sebeket gyógyít.",
+    "type": "consumable",
+    "effect": "heal_hp",
+    "amount": 180,
+    "asset": "items/potions/health_potion",
+    "value": 250,
+    "weight": 0.5
+  },
+  "great_mana_potion": {
+    "name": "Mana ital (Kiváló)",
+    "description": "Manát tölt vissza.",
+    "type": "consumable",
+    "effect": "heal_mana",
+    "amount": 180,
+    "asset": "items/potions/mana_potion",
+    "value": 250,
+    "weight": 0.5
+  },
+  "great_stamina_potion": {
+    "name": "Állóképesség ital (Kiváló)",
+    "description": "Állóképességet ad.",
+    "type": "consumable",
+    "effect": "heal_stamina",
+    "amount": 220,
+    "asset": "items/potions/stamina_potion",
+    "value": 250,
+    "weight": 0.5
+  },
+  "weak_dagger": {
+    "type": "weapon",
+    "name": "Tőr (Gyenge)",
+    "description": "Gyors, könnyű, viszont kevesebb sebzés",
+    "asset": "items/weapons/dagger",
+    "attack_style": "melee",
+    "damage": 10,
+    "cooldown": 30,
+    "damage_type": "piercing",
+    "stamina_cost": 10,
+    "value": 50,
+    "weight": 3.0
+  },
+  "dagger": {
+    "type": "weapon",
+    "name": "Tőr",
+    "description": "Gyors, könnyű, viszont kevesebb sebzés",
+    "asset": "items/weapons/dagger",
+    "attack_style": "melee",
+    "damage": 15,
+    "cooldown": 30,
+    "damage_type": "piercing",
+    "stamina_cost": 10,
+    "value": 100,
+    "weight": 3.0
+  },
+  "good_dagger": {
+    "type": "weapon",
+    "name": "Tőr (Jó)",
+    "description": "Gyors, könnyű, viszont kevesebb sebzés",
+    "asset": "items/weapons/dagger",
+    "attack_style": "melee",
+    "damage": 30,
+    "cooldown": 30,
+    "damage_type": "piercing",
+    "stamina_cost": 10,
+    "value": 300,
+    "weight": 3.0
+  },
+  "great_dagger": {
+    "type": "weapon",
+    "name": "Tőr (Kiváló)",
+    "description": "Gyors, könnyű, viszont kevesebb sebzés",
+    "asset": "items/weapons/dagger",
+    "attack_style": "melee",
+    "damage": 50,
+    "cooldown": 30,
+    "damage_type": "piercing",
+    "stamina_cost": 10,
+    "value": 800,
+    "weight": 3.0
+  },
+  "legendary_dagger": {
+    "type": "weapon",
+    "name": "Tőr (Legendás)",
+    "description": "Gyors, könnyű, viszont kevesebb sebzés",
+    "asset": "items/weapons/dagger",
+    "attack_style": "melee",
+    "damage": 80,
+    "cooldown": 30,
+    "damage_type": "piercing",
+    "stamina_cost": 10,
+    "value": 2000,
+    "weight": 3.0
+  },
+  "weak_sword": {
+    "type": "weapon",
+    "name": "Rövidkard (Gyenge)",
+    "description": "Egy egyszerű kard.",
+    "asset": "items/weapons/sword",
+    "attack_style": "melee",
+    "damage": 20,
+    "cooldown": 60,
+    "damage_type": "slashing",
+    "stamina_cost": 20,
+    "value": 100,
+    "weight": 6.0
+  },
+  "sword": {
+    "type": "weapon",
+    "name": "Rövidkard",
+    "description": "Egy egyszerű kard.",
+    "asset": "items/weapons/sword",
+    "attack_style": "melee",
+    "damage": 35,
+    "cooldown": 60,
+    "damage_type": "slashing",
+    "stamina_cost": 20,
+    "value": 300,
+    "weight": 6.0
+  },
+  "good_sword": {
+    "type": "weapon",
+    "name": "Rövidkard (Jó)",
+    "description": "Egy egyszerű kard.",
+    "asset": "items/weapons/sword",
+    "attack_style": "melee",
+    "damage": 60,
+    "cooldown": 60,
+    "damage_type": "slashing",
+    "stamina_cost": 20,
+    "value": 800,
+    "weight": 6.0
+  },
+  "great_sword": {
+    "type": "weapon",
+    "name": "Rövidkard (Kiváló)",
+    "description": "Egy egyszerű kard.",
+    "asset": "items/weapons/sword",
+    "attack_style": "melee",
+    "damage": 100,
+    "cooldown": 60,
+    "damage_type": "slashing",
+    "stamina_cost": 20,
+    "value": 1500,
+    "weight": 6.0
+  },
+  "legendary_sword": {
+    "type": "weapon",
+    "name": "Rövidkard (Legendás)",
+    "description": "Egy egyszerű kard.",
+    "asset": "items/weapons/sword",
+    "attack_style": "melee",
+    "damage": 150,
+    "cooldown": 60,
+    "damage_type": "slashing",
+    "stamina_cost": 20,
+    "value": 3000,
+    "weight": 6.0
+  },
+  "weak_mace": {
+    "type": "weapon",
+    "name": "Buzogány (Gyenge)",
+    "description": "Nehéz, de jó sebzés.",
+    "asset": "items/weapons/mace",
+    "attack_style": "melee",
+    "damage": 20,
+    "cooldown": 90,
+    "damage_type": "blunt",
+    "stamina_cost": 30,
+    "value": 100,
+    "weight": 10.0
+  },
+  "mace": {
+    "type": "weapon",
+    "name": "Buzogány",
+    "description": "Nehéz, de jó sebzés.",
+    "asset": "items/weapons/mace",
+    "attack_style": "melee",
+    "damage": 50,
+    "cooldown": 90,
+    "damage_type": "blunt",
+    "stamina_cost": 30,
+    "value": 300,
+    "weight": 10.0
+  },
+  "good_mace": {
+    "type": "weapon",
+    "name": "Buzogány (Jó)",
+    "description": "Nehéz, de jó sebzés.",
+    "asset": "items/weapons/mace",
+    "attack_style": "melee",
+    "damage": 80,
+    "cooldown": 90,
+    "damage_type": "blunt",
+    "stamina_cost": 30,
+    "value": 800,
+    "weight": 10.0
+  },
+  "great_mace": {
+    "type": "weapon",
+    "name": "Buzogány (Kiváló)",
+    "description": "Nehéz, de jó sebzés.",
+    "asset": "items/weapons/mace",
+    "attack_style": "melee",
+    "damage": 130,
+    "cooldown": 90,
+    "damage_type": "blunt",
+    "stamina_cost": 30,
+    "value": 2000,
+    "weight": 10.0
+  },
+  "legendary_mace": {
+    "type": "weapon",
+    "name": "Buzogány (Legendás)",
+    "description": "Nehéz, de jó sebzés.",
+    "asset": "items/weapons/mace",
+    "attack_style": "melee",
+    "damage": 200,
+    "cooldown": 90,
+    "damage_type": "blunt",
+    "stamina_cost": 30,
+    "value": 4000,
+    "weight": 10.0
+  },
+
+  "weak_ice_staff": {
+    "type": "weapon",
+    "name": "Jeges bot (Gyenge)",
+    "description": "Jég-szilánkokat lő.",
+    "asset": "items/weapons/staves/ice_staff",
+    "attack_style": "ranged",
+    "damage": 12,
+    "damage_type": "ice",
+    "mana_cost": 25,
+    "projectile_speed": 4.0,
+    "projectile_asset": "ice",
+    "value": 150,
+    "weight": 10.0
+  },
+  "ice_staff": {
+    "type": "weapon",
+    "name": "Jeges bot",
+    "description": "Jég-szilánkokat lő.",
+    "asset": "items/weapons/staves/ice_staff",
+    "attack_style": "ranged",
+    "damage": 30,
+    "damage_type": "ice",
+    "mana_cost": 30,
+    "projectile_speed": 4.0,
+    "projectile_asset": "ice",
+    "value": 500,
+    "weight": 10.0
+  },
+  "good_ice_staff": {
+    "type": "weapon",
+    "name": "Jeges bot (Jó)",
+    "description": "Jég-szilánkokat lő.",
+    "asset": "items/weapons/staves/ice_staff",
+    "attack_style": "ranged",
+    "damage": 60,
+    "damage_type": "ice",
+    "mana_cost": 50,
+    "projectile_speed": 4.0,
+    "projectile_asset": "ice",
+    "value": 1200,
+    "weight": 10.0
+  },
+  "great_ice_staff": {
+    "type": "weapon",
+    "name": "Jeges bot (Kiváló)",
+    "description": "Jég-szilánkokat lő.",
+    "asset": "items/weapons/staves/ice_staff",
+    "attack_style": "ranged",
+    "damage": 120,
+    "damage_type": "ice",
+    "mana_cost": 75,
+    "projectile_speed": 4.0,
+    "projectile_asset": "ice",
+    "value": 2500,
+    "weight": 10.0
+  },
+  "legendary_ice_staff": {
+    "type": "weapon",
+    "name": "Jeges bot (Legendás)",
+    "description": "Jég-szilánkokat lő.",
+    "asset": "items/weapons/staves/ice_staff",
+    "attack_style": "ranged",
+    "damage": 120,
+    "damage_type": "ice",
+    "mana_cost": 100,
+    "projectile_speed": 4.0,
+    "projectile_asset": "ice",
+    "value": 5000,
+    "weight": 10.0
+  },
+  "weak_fire_staff": {
+    "type": "weapon",
+    "name": "Tüzes bot (Gyenge)",
+    "description": "Tűzgolyókat lő.",
+    "asset": "items/weapons/staves/fire_staff",
+    "attack_style": "ranged",
+    "damage": 12,
+    "damage_type": "fire",
+    "mana_cost": 25,
+    "projectile_speed": 4.0,
+    "projectile_asset": "fire",
+    "value": 150,
+    "weight": 10.0
+  },
+  "fire_staff": {
+    "type": "weapon",
+    "name": "Tüzes bot",
+    "description": "Tűzgolyókat lő.",
+    "asset": "items/weapons/staves/fire_staff",
+    "attack_style": "ranged",
+    "damage": 30,
+    "damage_type": "fire",
+    "mana_cost": 30,
+    "projectile_speed": 4.0,
+    "projectile_asset": "fire",
+    "value": 500,
+    "weight": 10.0
+  },
+  "good_fire_staff": {
+    "type": "weapon",
+    "name": "Tüzes bot (Jó)",
+    "description": "Tűzgolyókat lő.",
+    "asset": "items/weapons/staves/fire_staff",
+    "attack_style": "ranged",
+    "damage": 50,
+    "damage_type": "fire",
+    "mana_cost": 25,
+    "projectile_speed": 4.0,
+    "projectile_asset": "fire",
+    "value": 1200,
+    "weight": 10.0
+  },
+  "great_fire_staff": {
+    "type": "weapon",
+    "name": "Tüzes bot (Kiváló)",
+    "description": "Tűzgolyókat lő.",
+    "asset": "items/weapons/staves/fire_staff",
+    "attack_style": "ranged",
+    "damage": 120,
+    "damage_type": "fire",
+    "mana_cost": 75,
+    "projectile_speed": 4.0,
+    "projectile_asset": "fire",
+    "value": 2500,
+    "weight": 10.0
+  },
+  "legendary_fire_staff": {
+    "type": "weapon",
+    "name": "Tüzes bot (Legendás)",
+    "description": "Tűzgolyókat lő.",
+    "asset": "items/weapons/staves/fire_staff",
+    "attack_style": "ranged",
+    "damage": 200,
+    "damage_type": "fire",
+    "mana_cost": 100,
+    "projectile_speed": 4.0,
+    "projectile_asset": "fire",
+    "value": 5000,
+    "weight": 10.0
+  },
+  "weak_leather_armor": {
+    "type": "armor",
+    "name": "Bőr ruha (Gyenge)",
+    "description": "Egy gyenge minőségű bőr ruha.",
+    "asset": "items/armors/leather_armor",
+    "value": 100,
+    "weight": 15,
+    "defense": 10,
+    "resistances": {
+      "piercing": 1.0,
+      "slashing": 0.9,
+      "blunt": 0.9,
+      "fire": 1.2,
+      "ice": 0.8
+    }
+  },
+  "leather_armor": {
+    "type": "armor",
+    "name": "Bőr ruha",
+    "description": "Egy átlagos minőségű bőr ruha.",
+    "asset": "items/armors/leather_armor",
+    "value": 200,
+    "weight": 15,
+    "defense": 25,
+    "resistances": {
+      "piercing": 1.0,
+      "slashing": 0.9,
+      "blunt": 0.9,
+      "fire": 1.2,
+      "ice": 0.8
+    }
+  },
+  "good_leather_armor": {
+    "type": "armor",
+    "name": "Bőr ruha (Jó)",
+    "description": "Egy átlagos minőségű bőr ruha.",
+    "asset": "items/armors/leather_armor",
+    "value": 500,
+    "weight": 15,
+    "defense": 40,
+    "resistances": {
+      "piercing": 1.0,
+      "slashing": 0.9,
+      "blunt": 0.9,
+      "fire": 1.2,
+      "ice": 0.8
+    }
+  },
+  "great_leather_armor": {
+    "type": "armor",
+    "name": "Bőr ruha (Kiváló)",
+    "description": "Egy kiváló minőségű bőr ruha.",
+    "asset": "items/armors/leather_armor",
+    "value": 1500,
+    "weight": 15,
+    "defense": 70,
+    "resistances": {
+      "piercing": 1.0,
+      "slashing": 0.9,
+      "blunt": 0.9,
+      "fire": 1.2,
+      "ice": 0.8
+    }
+  },
+  "legendary_leather_armor": {
+    "type": "armor",
+    "name": "Bőr ruha (Legendás)",
+    "description": "Egy legendás minőségű bőr ruha.",
+    "asset": "items/armors/leather_armor",
+    "value": 3000,
+    "weight": 15,
+    "defense": 100,
+    "resistances": {
+      "piercing": 1.0,
+      "slashing": 0.9,
+      "blunt": 0.9,
+      "fire": 1.2,
+      "ice": 0.8
+    }
+  },
+  "weak_iron_armor": {
+    "type": "armor",
+    "name": "Vas páncél (Gyenge)",
+    "description": "Egy gyenge minőségű vas páncél.",
+    "asset": "items/armors/iron_armor",
+    "value": 200,
+    "weight": 25,
+    "defense": 20,
+    "resistances": {
+      "piercing": 0.8,
+      "slashing": 0.8,
+      "blunt": 0.7,
+      "fire": 1.4,
+      "ice": 1.4
+    }
+  },
+  "iron_armor": {
+    "type": "armor",
+    "name": "Vas páncél",
+    "description": "Egy átlagos minőségű vas páncél.",
+    "asset": "items/armors/iron_armor",
+    "value": 500,
+    "weight": 25,
+    "defense": 35,
+    "resistances": {
+      "piercing": 0.8,
+      "slashing": 0.8,
+      "blunt": 0.7,
+      "fire": 1.4,
+      "ice": 1.4
+    }
+  },
+  "good_iron_armor": {
+    "type": "armor",
+    "name": "Vas páncél (Jó)",
+    "description": "Egy jó minőségű vas páncél.",
+    "asset": "items/armors/iron_armor",
+    "value": 1200,
+    "weight": 25,
+    "defense": 70,
+    "resistances": {
+      "piercing": 0.8,
+      "slashing": 0.8,
+      "blunt": 0.7,
+      "fire": 1.4,
+      "ice": 1.4
+    }
+  },
+  "great_iron_armor": {
+    "type": "armor",
+    "name": "Vas páncél (Kiváló)",
+    "description": "Egy kiváló minőségű vas páncél.",
+    "asset": "items/armors/iron_armor",
+    "value": 3000,
+    "weight": 25,
+    "defense": 130,
+    "resistances": {
+      "piercing": 0.8,
+      "slashing": 0.8,
+      "blunt": 0.7,
+      "fire": 1.4,
+      "ice": 1.4
+    }
+  },
+  "legendary_iron_armor": {
+    "type": "armor",
+    "name": "Vas páncél (Legendás)",
+    "description": "Egy legendás minőségű vas páncél.",
+    "asset": "items/armors/iron_armor",
+    "value": 5000,
+    "weight": 25,
+    "defense": 200,
+    "resistances": {
+      "piercing": 0.8,
+      "slashing": 0.8,
+      "blunt": 0.7,
+      "fire": 1.4,
+      "ice": 1.4
+    }
+  },
+  "weak_chainmail_armor": {
+    "type": "armor",
+    "name": "Lánc ruha (Gyenge)",
+    "description": "Egy gyenge minőségű lánc ruha.",
+    "asset": "items/armors/chain_armor",
+    "value": 200,
+    "weight": 15,
+    "defense": 10,
+    "resistances": {
+      "piercing": 0.7,
+      "slashing": 0.7,
+      "blunt": 1.2,
+      "fire": 1.2,
+      "ice": 1.2
+    }
+  },
+  "chainmail_armor": {
+    "type": "armor",
+    "name": "Lánc ruha",
+    "description": "Egy átlagos minőségű lánc ruha.",
+    "asset": "items/armors/chain_armor",
+    "value": 500,
+    "weight": 15,
+    "defense": 25,
+    "resistances": {
+      "piercing": 0.7,
+      "slashing": 0.7,
+      "blunt": 1.2,
+      "fire": 1.2,
+      "ice": 1.2
+    }
+  },
+  "good_chainmail_armor": {
+    "type": "armor",
+    "name": "Lánc ruha (Jó)",
+    "description": "Egy jó minőségű lánc ruha.",
+    "asset": "items/armors/chain_armor",
+    "value": 1000,
+    "weight": 15,
+    "defense": 50,
+    "resistances": {
+      "piercing": 0.7,
+      "slashing": 0.7,
+      "blunt": 1.2,
+      "fire": 1.2,
+      "ice": 1.2
+    }
+  },
+  "great_chainmail_armor": {
+    "type": "armor",
+    "name": "Lánc ruha (Kiváló)",
+    "description": "Egy Kiváló minőségű lánc ruha.",
+    "asset": "items/armors/chain_armor",
+    "value": 1800,
+    "weight": 15,
+    "defense": 90,
+    "resistances": {
+      "piercing": 0.7,
+      "slashing": 0.7,
+      "blunt": 1.2,
+      "fire": 1.2,
+      "ice": 1.2
+    }
+  },
+  "legendary_chainmail_armor": {
+    "type": "armor",
+    "name": "Lánc ruha (Legendás)",
+    "description": "Egy legendás minőségű lánc ruha.",
+    "asset": "items/armors/chain_armor",
+    "value": 4000,
+    "weight": 15,
+    "defense": 140,
+    "resistances": {
+      "piercing": 0.7,
+      "slashing": 0.7,
+      "blunt": 1.2,
+      "fire": 1.2,
+      "ice": 1.2
+    }
+  },
+  "weak_magic_cape": {
+    "type": "armor",
+    "name": "Mágikus köpeny (Gyenge)",
+    "description": "Egy gyenge minőségű mágikus köpeny.",
+    "asset": "items/armors/magic_cape",
+    "value": 300,
+    "weight": 5,
+    "defense": 15,
+    "resistances": {
+      "piercing": 1.8,
+      "slashing": 1.8,
+      "blunt": 1.8,
+      "fire": 0.4,
+      "ice": 0.4
+    }
+  },
+  "magic_cape": {
+    "type": "armor",
+    "name": "Mágikus köpeny",
+    "description": "Egy átlagos minőségű mágikus köpeny.",
+    "asset": "items/armors/magic_cape",
+    "value": 800,
+    "weight": 5,
+    "defense": 30,
+    "resistances": {
+      "piercing": 1.8,
+      "slashing": 1.8,
+      "blunt": 1.8,
+      "fire": 0.4,
+      "ice": 0.4
+    }
+  },
+  "good_magic_cape": {
+    "type": "armor",
+    "name": "Mágikus köpeny (Jó)",
+    "description": "Egy jó minőségű mágikus köpeny.",
+    "asset": "items/armors/magic_cape",
+    "value": 2000,
+    "weight": 5,
+    "defense": 80,
+    "resistances": {
+      "piercing": 1.8,
+      "slashing": 1.8,
+      "blunt": 1.8,
+      "fire": 0.4,
+      "ice": 0.4
+    }
+  },
+  "great_magic_cape": {
+    "type": "armor",
+    "name": "Mágikus köpeny (Kiváló)",
+    "description": "Egy Kiváló minőségű mágikus köpeny.",
+    "asset": "items/armors/magic_cape",
+    "value": 3500,
+    "weight": 5,
+    "defense": 120,
+    "resistances": {
+      "piercing": 1.8,
+      "slashing": 1.8,
+      "blunt": 1.8,
+      "fire": 0.4,
+      "ice": 0.4
+    }
+  },
+  "legendary_magic_cape": {
+    "type": "armor",
+    "name": "Mágikus köpeny (Legendás)",
+    "description": "Egy legendás minőségű mágikus köpeny.",
+    "asset": "items/armors/magic_cape",
+    "value": 6000,
+    "weight": 5,
+    "defense": 180,
+    "resistances": {
+      "piercing": 1.8,
+      "slashing": 1.8,
+      "blunt": 1.8,
+      "fire": 0.4,
+      "ice": 0.4
+    }
+  }
+}

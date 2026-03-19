@@ -1,0 +1,561 @@
+{
+  "old_man": {
+    "conditions": [
+      {
+        "if_quest_state": ["rat_infestation", "complete"],
+        "start_node": "rat_infestation_reward_start"
+      },
+      {
+        "if_quest_state": ["rat_infestation", "active"],
+        "start_node": "rat_infestation_reminder"
+      },
+      {
+        "if_quest_state": ["slime_problem", "complete"],
+        "start_node": "slime_problem_reward_start"
+      },
+      {
+        "if_quest_state": ["slime_problem", "active"],
+        "start_node": "slime_problem_reminder"
+      },
+      {
+        "if_quest_state": ["spider_infestation", "complete"],
+        "start_node": "spider_infestation_reward_start"
+      },
+      {
+        "if_quest_state": ["spider_infestation", "active"],
+        "start_node": "spider_infestation_reminder"
+      },
+      {
+        "if_quest_state": ["golem_problem", "complete"],
+        "start_node": "golem_problem_reward_start"
+      },
+      {
+        "if_quest_state": ["golem_problem", "active"],
+        "start_node": "golem_problem_reminder"
+      },
+      {
+        "if_quest_state": ["boss_problem", "complete"],
+        "start_node": "boss_problem_reward_start"
+      },
+      {
+        "if_quest_state": ["boss_problem", "active"],
+        "start_node": "boss_problem_reminder"
+      }
+    ],
+    "default_start_node": "greeting_1",
+    "dialogues": {
+      "greeting_1": {
+        "text": "Üdvözöllek, vándor. Régen láttam már idegent ezen a vidéken.",
+        "goto": "greeting_2"
+      },
+      "greeting_2": {
+        "text": "Légy óvatos, a környék tele van veszéllyel. Segíthetek valamiben?",
+        "choices": [
+          { "text": "Miféle veszélyekkel?", "goto": "danger" },
+          { "text": "Semmi, csak nézelődöm.", "goto": "end_dialogue" }
+        ]
+      },
+      "danger": {
+        "text": "Régen a közeli bányában dolgoztam. Azóta mágikus lények tombolnak benne. Talán te tudnál segíteni, hogy elmenjenek.",
+        "choices": [
+          { "text": "Persze! Mi lenne a feladat?", "goto": "rat_infestation" },
+          { "text": "Majd később beszélünk.", "goto": "end_dialogue" }
+        ]
+      },
+      "rat_infestation": {
+        "condition": {
+          "if_quest_state_is_not": ["rat_infestation", "active", "complete"]
+        },
+        "text": "A felszínhez közeli szinteken elég sok a patkány, kérlek ritkítsd meg őket!",
+        "choices": [
+          {
+            "text": "Igen, számíthatsz rám!",
+            "goto": "rat_infestation_quest_accept"
+          },
+          {
+            "text": "Most nincs időm erre.",
+            "goto": "rat_infestation_quest_decline"
+          }
+        ]
+      },
+      "rat_infestation_quest_accept": {
+        "text": "Remek! Térj vissza hozzám, ha végeztél.",
+        "action": "start_quest",
+        "quest_id": "rat_infestation",
+        "end": true
+      },
+      "rat_infestation_quest_decline": {
+        "text": "Sajnos igazad van, veszélyes küldetés. Talán később.",
+        "end": true
+      },
+      "rat_infestation_reminder": {
+        "text": "Még mindig sok a patkány, térj vissza, ha megöltél párat.",
+        "end": true
+      },
+      "rat_infestation_reward_start": {
+        "text": "Sikerrel jártál, itt a jutalmad! (100 arany)",
+        "action": "give_gold",
+        "gold_amount": 100,
+        "goto": "rat_infestation_turnin"
+      },
+
+      "rat_infestation_turnin": {
+        "action": "turn_in_quest",
+        "quest_id": "rat_infestation",
+        "goto": "rat_infestation_set_greeting3"
+      },
+
+      "rat_infestation_set_greeting3": {
+        "action": "set_greeting_level",
+        "level": 3,
+        "goto": "rat_infestation_after_reward_text"
+      },
+
+      "rat_infestation_after_reward_text": {
+        "text": "Hálás vagyok, azért amit tettél.",
+        "end": true
+      },
+
+      "greeting_3": {
+        "text": "Mit tehetek érted, kedves vándor?",
+        "choices": [
+          {
+            "text": "Tudok még valamiben segíteni?",
+            "goto": "slime_problem"
+          },
+          { "text": "Semmi, csak nézelődöm.", "goto": "end_dialogue" }
+        ]
+      },
+
+      "slime_problem": {
+        "condition": {
+          "if_quest_state_is_not": ["slime_problem", "active", "complete"]
+        },
+        "text": "Nyálkás lények is elszaporodtak a bányában, kérlek távolítsd el őket!",
+        "choices": [
+          {
+            "text": "Természetesen!",
+            "goto": "slime_problem_quest_accept"
+          },
+          {
+            "text": "Most nincs időm erre.",
+            "goto": "slime_problem_quest_decline"
+          }
+        ]
+      },
+
+      "slime_problem_quest_accept": {
+        "text": "Remek! Térj vissza hozzám, ha végeztél.",
+        "action": "start_quest",
+        "quest_id": "slime_problem",
+        "end": true
+      },
+      "slime_problem_quest_decline": {
+        "text": "Sajnos igazad van, veszélyes küldetés. Talán később.",
+        "end": true
+      },
+      "slime_problem_reminder": {
+        "text": "Még mindig sok a nyálka, térj vissza, ha megöltél párat.",
+        "end": true
+      },
+      "slime_problem_reward_start": {
+        "text": "Sikerrel jártál, itt a jutalmad! (200 arany)",
+        "action": "give_gold",
+        "gold_amount": 200,
+        "goto": "slime_problem_turnin"
+      },
+      "slime_problem_turnin": {
+        "action": "turn_in_quest",
+        "quest_id": "slime_problem",
+        "goto": "slime_problem_set_greeting4"
+      },
+      "slime_problem_set_greeting4": {
+        "action": "set_greeting_level",
+        "level": 4,
+        "goto": "slime_problem_after_reward_text"
+      },
+
+      "slime_problem_after_reward_text": {
+        "text": "Hálás vagyok, azért amit tettél.",
+        "end": true
+      },
+
+      "greeting_4": {
+        "text": "Üdv, kedves vándor!",
+        "choices": [
+          {
+            "text": "Tudok még valamiben segíteni?",
+            "goto": "spider_infestation"
+          },
+          { "text": "Semmi, csak nézelődöm.", "goto": "end_dialogue" }
+        ]
+      },
+
+      "spider_infestation": {
+        "condition": {
+          "if_quest_state_is_not": ["spider_infestation", "active", "complete"]
+        },
+        "text": "Tele van pókkal a bánya, kérlek végezz velük!",
+        "choices": [
+          {
+            "text": "Természetesen!",
+            "goto": "spider_infestation_quest_accept"
+          },
+          {
+            "text": "Most nincs időm erre.",
+            "goto": "spider_infestation_quest_decline"
+          }
+        ]
+      },
+
+      "spider_infestation_quest_accept": {
+        "text": "Remek! Viszont légy nagyon óvatos, ha a pókok behálóznak, nagyon nehéz lesz kiszabadulni belőle.",
+        "action": "start_quest",
+        "quest_id": "spider_infestation",
+        "end": true
+      },
+      "spider_infestation_quest_decline": {
+        "text": "Sajnos igazad van, veszélyes küldetés. Talán később.",
+        "end": true
+      },
+      "spider_infestation_reminder": {
+        "text": "Még mindig sok pók van, térj vissza, ha megöltél párat.",
+        "end": true
+      },
+      "spider_infestation_reward_start": {
+        "text": "Sikerrel jártál, itt a jutalmad! (Kard)",
+        "action": "give_item",
+        "item_id": "sword",
+        "goto": "spider_infestation_turnin"
+      },
+      "spider_infestation_turnin": {
+        "action": "turn_in_quest",
+        "quest_id": "spider_infestation",
+        "goto": "spider_infestation_set_greeting5"
+      },
+      "spider_infestation_set_greeting5": {
+        "action": "set_greeting_level",
+        "level": 5,
+        "goto": "spider_infestation_after_reward_text"
+      },
+      "spider_infestation_after_reward_text": {
+        "text": "Hálás vagyok, azért amit tettél.",
+        "end": true
+      },
+
+      "greeting_5": {
+        "text": "Üdv, kedves vándor!",
+        "choices": [
+          {
+            "text": "Tudok még valamiben segíteni?",
+            "goto": "golem_problem"
+          },
+          { "text": "Semmi, csak nézelődöm.", "goto": "end_dialogue" }
+        ]
+      },
+
+      "golem_problem": {
+        "condition": {
+          "if_quest_state_is_not": ["golem_problem", "active", "complete"]
+        },
+        "text": "Erős gólemek is vannak, csak mélyebben a bányában. Ehhez először le is kell érned oda. Ha ez sikerült, akkor kérlek öldd meg őket! Két fajtájuk létezik, a tűz és jég gólem. Érdemes varázsbotokat használni ellenük az ellenkező elemből.",
+        "choices": [
+          {
+            "text": "Értettem!",
+            "goto": "golem_problem_quest_accept"
+          },
+          {
+            "text": "Egyelőre ez túl nehezen hangzik.",
+            "goto": "golem_problem_quest_decline"
+          }
+        ]
+      },
+
+      "golem_problem_quest_accept": {
+        "text": "Nagyszerű! A gólemek elég masszívak, kitartónak és ügyesnek kell lenned! Sok sikert kívánok!",
+        "action": "start_quest",
+        "quest_id": "golem_problem",
+        "end": true
+      },
+      "golem_problem_quest_decline": {
+        "text": "Sajnos igazad van, veszélyes küldetés. Talán később.",
+        "end": true
+      },
+      "golem_problem_reminder": {
+        "text": "Még mindig sok gólem van, térj vissza, ha megöltél párat.",
+        "end": true
+      },
+      "golem_problem_reward_start": {
+        "text": "Sikerrel jártál, itt a jutalmad! (Jó minőségű buzogány)",
+        "action": "give_item",
+        "item_id": "good_mace",
+        "goto": "golem_problem_turnin"
+      },
+      "golem_problem_turnin": {
+        "action": "turn_in_quest",
+        "quest_id": "golem_problem",
+        "goto": "golem_problem_set_greeting6"
+      },
+      "golem_problem_set_greeting6": {
+        "action": "set_greeting_level",
+        "level": 6,
+        "goto": "golem_problem_after_reward_text"
+      },
+      "golem_problem_after_reward_text": {
+        "text": "Rendkívűl hálás vagyok, azért amit tettél.",
+        "end": true
+      },
+
+      "greeting_6": {
+        "text": "Üdvözöllek, kiváló harcos!",
+        "choices": [
+          {
+            "text": "Tudok még valamiben segíteni?",
+            "goto": "boss_problem"
+          },
+          { "text": "Semmi, csak nézelődöm.", "goto": "end_dialogue" }
+        ]
+      },
+
+      "boss_problem": {
+        "condition": {
+          "if_quest_state_is_not": ["boss_problem", "active", "complete"]
+        },
+        "text": "Ez lesz az utolsó és egyben legnehezebb kérésem feléd. Van egy nagyon erős jeges gólem. A gólem jeges szilánkjainak segítségével talán véget vethetünk ennek az egésznek.",
+        "choices": [
+          {
+            "text": "Értettem!",
+            "goto": "boss_problem_quest_accept"
+          },
+          {
+            "text": "Egyelőre ez túl nehezen hangzik.",
+            "goto": "boss_problem_quest_decline"
+          }
+        ]
+      },
+
+      "boss_problem_quest_accept": {
+        "text": "Ez a gólem nagyon erős. Azt ajánlom, hogy gyengébb ellenfeleken halmozz fel tapasztalot. Felszerelést illetően tüzes botot és mágikus köpenyt ajánlok. Így talán lesz esélyed.",
+        "action": "start_quest",
+        "quest_id": "boss_problem",
+        "end": true
+      },
+      "boss_problem_quest_decline": {
+        "text": "Sajnos igazad van, veszélyes küldetés. Fejleszd képességeidet, és vegyél ehhez méltó eszközöket.",
+        "end": true
+      },
+      "boss_problem_reminder": {
+        "text": "A jeges szilánk még mindig nem került hozzánk. Kérlek hozd el számunkra a megnyugvást!",
+        "end": true
+      },
+      "boss_problem_reward_start": {
+        "text": "Ez hihetetlen. Megtetted azt, amire eddig senki nem volt képes. Sosem fogjuk tudni meghálálni azt amit tettél értünk! Köszönjük!",
+        "action": "give_item",
+        "item_id": "legendary_sword",
+        "goto": "boss_problem_turnin"
+      },
+      "boss_problem_turnin": {
+        "action": "turn_in_quest",
+        "quest_id": "boss_problem",
+        "goto": "boss_problem_set_greeting7"
+      },
+      "boss_problem_set_greeting7": {
+        "action": "set_greeting_level",
+        "level": 7,
+        "goto": "boss_problem_after_reward_text"
+      },
+      "boss_problem_after_reward_text": {
+        "text": "Rendkívűl hálás vagyok, azért amit tettél értünk!",
+        "end": true
+      },
+
+      "greeting_7": {
+        "text": "Üdvözöllek, dicső hősünk!",
+        "choices": [
+          {
+            "text": "Tudok még valamiben segíteni?",
+            "goto": "ending"
+          },
+          { "text": "Semmi, csak nézelődöm.", "goto": "end_dialogue" }
+        ]
+      },
+
+      "ending": {
+        "text": "Semmi többet nem tudunk kérni tőled, mindent megtettél! Mégegyszer rendkívül hálásak vagyunk! (Itt véget ért a játék. A szintek továbbra is játszhatóak maradnak. Köszönöm, hogy végigjátszotta.)",
+        "end": true
+      },
+
+      "end_dialogue": {
+        "text": "Rendben. Vigyázz magadra.",
+        "end": true
+      }
+    }
+  },
+  "blacksmith": {
+    "default_start_node": "start",
+    "conditions": [],
+    "wares": [
+      "weak_dagger",
+      "weak_sword",
+      "weak_mace",
+      "weak_leather_armor",
+      "weak_iron_armor",
+      "weak_chainmail_armor",
+      "dagger",
+      "sword",
+      "mace",
+      "leather_armor",
+      "iron_armor",
+      "chainmail_armor",
+      "good_dagger",
+      "good_sword",
+      "good_mace",
+      "good_leather_armor",
+      "good_iron_armor",
+      "good_chainmail_armor",
+      "great_dagger",
+      "great_sword",
+      "great_mace",
+      "great_leather_armor",
+      "great_iron_armor",
+      "great_chainmail_armor",
+      "legendary_dagger",
+      "legendary_sword",
+      "legendary_mace",
+      "legendary_leather_armor",
+      "legendary_iron_armor",
+      "legendary_chainmail_armor"
+    ],
+    "dialogues": {
+      "start": {
+        "text": "Üdv, utazó! Nézz körül a portékáim között, hátha találsz valamit, ami elnyeri a tetszésedet.",
+        "choices": [
+          {
+            "text": "Mutasd, mid van! (Kereskedés)",
+            "goto": "open_trade_interface"
+          },
+          {
+            "text": "Tudsz nekem mesélni fegyverekről?",
+            "goto": "weapon_info_1"
+          },
+          {
+            "text": "Tudsz nekem mesélni páncélokról?",
+            "goto": "armor_info_1"
+          },
+          {
+            "text": "Csak nézelődöm, köszönöm.",
+            "goto": "goodbye"
+          }
+        ]
+      },
+      "open_trade_interface": {
+        "action": "open_trade"
+      },
+      "weapon_info_1": {
+        "text": "Persze! A tőrök szúró sebzést okoznak. Könnyűek, kevés állóképességet használnak fel, viszont kevesebb sebzést tudnak okozni.",
+        "goto": "weapon_info_2"
+      },
+      "weapon_info_2": {
+        "text": "Kardok vágásokban remekelnek. Igaz, hogy több állóképességet igényelnek, de sebzésük is jobb.",
+        "goto": "weapon_info_3"
+      },
+      "weapon_info_3": {
+        "text": "Vannak még a buzogányok. Ezek tompa sebzést okoznak. Nehezek, megfontolandó az összes suhintásuk, viszont porba lehet tiporni velük az ellenfelet.",
+        "goto": "weapon_info_4"
+      },
+      "weapon_info_4": {
+        "text": "Ki kell tapasztalni a számodra megfelelő fegyvert, sőt még azt is, hogy milyen ellenfél ellen használod. (A sebzés jelző, ami megjelenik egy sikeres támadásnál indikálja, hogy ellenfeled mire érzékeny. Minél sárgább a jelző, annál jobb sebzést okozol.)",
+        "end": true
+      },
+      "armor_info_1": {
+        "text": "Persze! A bőr ruha a legalapabb páncél fajta. Könnyűek, viszont nem is védenek olyan erősen. Szúró sebzés ellen semlegesen teljesítenek (x1.0), vágó és tompa sebzés ellen kis védelmet nyújtanak (x0.9), tüzes támadások ellen kifejezetten rosszak (x1.2), illetve jeges támadások ellen egész jól teljesítenek (x0.8).",
+        "goto": "armor_info_2"
+      },
+      "armor_info_2": {
+        "text": "A vas páncél egészen ellenálló fizikai sebzéseknek, és többet is védenek. Súlyukkal azért érdemes számolni. Szúró, vágó sebzés ellen egész jó védelmet nyújtanak (x0.8), tompa sebzés ellen a legjobbak (x0.7), viszont tüzes és jeges támadások ellen kifejezetten rosszak (x1.4).",
+        "goto": "armor_info_3"
+      },
+      "armor_info_3": {
+        "text": "A lánc ruha könnyű és ellenálló is. Szúró, vágó sebzés ellen kiváló védelmet nyújtanak (x0.7), viszont tompa sebzés ellen rosszak (x1.2). Tüzes és jeges támadások ellen sem valami jó választás (x1.2).",
+        "goto": "armor_info_4"
+      },
+      "armor_info_4": {
+        "text": "Ki kell tapasztalnod az ellenfeled, és az alapján eldönteni, hogy mit választasz. (A kapott sebzés jelző, ami megjelenik egy elszenvedett támadásnál indikálja, hogy ellenfeled miféle támadást használ. Minél sárgább a jelző, annál rosszabb sebzést szenvedsz el.)",
+        "end": true
+      }
+    }
+  },
+  "wizard": {
+    "default_start_node": "start",
+    "conditions": [],
+    "wares": [
+      "weak_health_potion",
+      "weak_mana_potion",
+      "weak_stamina_potion",
+      "health_potion",
+      "mana_potion",
+      "stamina_potion",
+      "weak_ice_staff",
+      "weak_fire_staff",
+      "ice_staff",
+      "fire_staff",
+      "weak_magic_cape",
+      "magic_cape",
+      "good_ice_staff",
+      "good_fire_staff",
+      "good_magic_cape",
+      "great_ice_staff",
+      "great_fire_staff",
+      "great_magic_cape",
+      "legendary_ice_staff",
+      "legendary_fire_staff",
+      "legendary_magic_cape"
+    ],
+    "dialogues": {
+      "start": {
+        "text": "Üdvözöllek! Miben segíthetek?",
+        "choices": [
+          {
+            "text": "Kereskedni szeretnék! (Kereskedés)",
+            "goto": "open_trade_interface"
+          },
+          {
+            "text": "Tudsz nekem varázsbotokról?",
+            "goto": "staff_info_1"
+          },
+          {
+            "text": "Tudsz nekem mesélni mágikus páncélokról?",
+            "goto": "cape_info_1"
+          },
+          {
+            "text": "Csak nézelődöm, köszönöm.",
+            "goto": "goodbye"
+          }
+        ]
+      },
+      "open_trade_interface": {
+        "action": "open_trade"
+      },
+      "staff_info_1": {
+        "text": "Persze! Két típusú varázsbotot tudsz használni. Az egyik a tüzes bot, a másik a jeges bot. Mindkettő bot távolsági harchoz ideális.",
+        "goto": "staff_info_2"
+      },
+      "staff_info_2": {
+        "text": "A tüzes bot nyílvánvalóan tűzgolyókat lő ki. A jeges bot pedig jég-szilánkokat. Az ellenséged elemzésével tudod eldönteni, hogy melyik bot alkalmas számodra. (A sebzés jelző, ami megjelenik egy sikeres támadásnál indikálja, hogy ellenfeled mire érzékeny. Minél sárgább a jelző, annál jobb sebzést okozol.)",
+        "goto": "staff_info_3"
+      },
+      "staff_info_3": {
+        "text": "Arra is oda kell figyelned, hogy a botok használata sok manát használ fel, attól függően, hogy milyen minőségűek. Érdemes a manával kapcsolatos képességeidet fejleszteni, ha ilyen irányban gondolkodsz.",
+        "end": true
+      },
+      "cape_info_1": {
+        "text": "Mágia ellen nem jól védenek a páncélok. Helyettük köpenyeket használhatsz.",
+        "goto": "cape_info_2"
+      },
+      "cape_info_2": {
+        "text": "Használatukat nagyon meg kell fontolni, hiszen fizikai támadások ellen borzasztó választás (x1.8), mert nem erre lett kitalálva. Viszont mágikus támadások ellen ennél jobb védelmet nem találhatsz (x0.4). (A kapott sebzés jelző, ami megjelenik egy elszenvedett támadásnál indikálja, hogy ellenfeled miféle támadást használ. Minél sárgább a jelző, annál rosszabb sebzést szenvedsz el.",
+        "end": true
+      }
+    }
+  }
+}
