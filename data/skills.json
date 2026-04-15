@@ -1,0 +1,198 @@
+{
+            "warrior": {
+                "name": "Erő",
+                "description": "Fizikai erőre és állóképességre fókuszáló fejlesztések.",
+                "skills": {
+                    "increase_hp": {
+                        "name": "Életerő",
+                        "description": "Növeli a maximális életerőt.",
+                        "max_level": 5,
+                        "levels": [
+                            {"cost": 1, "effect": ["max_hp", "+", 10], "desc_change": "+10 Max életerő"},
+                            {"cost": 1, "effect": ["max_hp", "+", 15], "desc_change": "+15 Max életerő"},
+                            {"cost": 1, "effect": ["max_hp", "+", 20], "desc_change": "+20 Max életerő"},
+                            {"cost": 1, "effect": ["max_hp", "+", 25], "desc_change": "+25 Max életerő"},
+                            {"cost": 1, "effect": ["max_hp", "+", 30], "desc_change": "+30 Max életerő"}
+                        ]
+                    },
+                    "hp_regen_multiplier": {
+                        "name": "Életerő regeneráció",
+                        "description": "Gyorsabb életerő regeneráció",
+                        "max_level": 10,
+                        "levels": [
+                            {"cost": 1, "effect": ["hp_regen_multiplier", "+", 0.05], "desc_change": "+5% Életerő regeneráció"},
+                            {"cost": 1, "effect": ["hp_regen_multiplier", "+", 0.05], "desc_change": "+5% Életerő regeneráció"},
+                            {"cost": 1, "effect": ["hp_regen_multiplier", "+", 0.05], "desc_change": "+5% Életerő regeneráció"},
+                            {"cost": 1, "effect": ["hp_regen_multiplier", "+", 0.05], "desc_change": "+5% Életerő regeneráció"},
+                            {"cost": 1, "effect": ["hp_regen_multiplier", "+", 0.05], "desc_change": "+5% Életerő regeneráció"},
+                            {"cost": 1, "effect": ["hp_regen_multiplier", "+", 0.05], "desc_change": "+5% Életerő regeneráció"},
+                            {"cost": 1, "effect": ["hp_regen_multiplier", "+", 0.05], "desc_change": "+5% Életerő regeneráció"},
+                            {"cost": 1, "effect": ["hp_regen_multiplier", "+", 0.05], "desc_change": "+5% Életerő regeneráció"},
+                            {"cost": 1, "effect": ["hp_regen_multiplier", "+", 0.05], "desc_change": "+5% Életerő regeneráció"},
+                            {"cost": 1, "effect": ["hp_regen_multiplier", "+", 0.05], "desc_change": "+5% Életerő regeneráció"}
+                        ]
+                    },
+                    "increase_damage_multiplier": {
+                        "name": "Fizikai sebzés",
+                        "description": "Növeli a közelharci fegyverek sebzését.",
+                        "max_level": 10,
+                        "levels": [
+                            {"cost": 1, "effect": ["attack_damage_multiplier", "+", 0.05], "desc_change": "+5% Fizikai sebzés"},
+                            {"cost": 1, "effect": ["attack_damage_multiplier", "+", 0.05], "desc_change": "+5% Fizikai sebzés"},
+                            {"cost": 1, "effect": ["attack_damage_multiplier", "+", 0.05], "desc_change": "+5% Fizikai sebzés"},
+                            {"cost": 1, "effect": ["attack_damage_multiplier", "+", 0.05], "desc_change": "+5% Fizikai sebzés"},
+                            {"cost": 1, "effect": ["attack_damage_multiplier", "+", 0.05], "desc_change": "+5% Fizikai sebzés"},
+                            {"cost": 1, "effect": ["attack_damage_multiplier", "+", 0.05], "desc_change": "+5% Fizikai sebzés"},
+                            {"cost": 1, "effect": ["attack_damage_multiplier", "+", 0.05], "desc_change": "+5% Fizikai sebzés"},
+                            {"cost": 1, "effect": ["attack_damage_multiplier", "+", 0.05], "desc_change": "+5% Fizikai sebzés"},
+                            {"cost": 1, "effect": ["attack_damage_multiplier", "+", 0.05], "desc_change": "+5% Fizikai sebzés"},
+                            {"cost": 1, "effect": ["attack_damage_multiplier", "+", 0.05], "desc_change": "+5% Fizikai sebzés"}
+                        ]
+                    },
+                    "decrease_attack_stamina_cost_multiplier": {
+                        "name": "Álloképesség fogyasztás",
+                        "description": "Fizikális fegyverek kevesebb állóképességet fogyasztanak.",
+                        "max_level": 10,
+                        "levels": [
+                            {"cost": 1, "effect": ["attack_stamina_cost_multiplier", "+", -0.05], "desc_change": "-5% Állóképesség fogyasztás"},
+                            {"cost": 1, "effect": ["attack_stamina_cost_multiplier", "+", -0.05], "desc_change": "-5% Állóképesség fogyasztás"},
+                            {"cost": 1, "effect": ["attack_stamina_cost_multiplier", "+", -0.05], "desc_change": "-5% Állóképesség fogyasztás"},
+                            {"cost": 1, "effect": ["attack_stamina_cost_multiplier", "+", -0.05], "desc_change": "-5% Állóképesség fogyasztás"},
+                            {"cost": 1, "effect": ["attack_stamina_cost_multiplier", "+", -0.05], "desc_change": "-5% Állóképesség fogyasztás"},
+                            {"cost": 1, "effect": ["attack_stamina_cost_multiplier", "+", -0.05], "desc_change": "-5% Állóképesség fogyasztás"},
+                            {"cost": 1, "effect": ["attack_stamina_cost_multiplier", "+", -0.05], "desc_change": "-5% Állóképesség fogyasztás"},
+                            {"cost": 1, "effect": ["attack_stamina_cost_multiplier", "+", -0.05], "desc_change": "-5% Állóképesség fogyasztás"},
+                            {"cost": 1, "effect": ["attack_stamina_cost_multiplier", "+", -0.05], "desc_change": "-5% Állóképesség fogyasztás"},
+                            {"cost": 1, "effect": ["attack_stamina_cost_multiplier", "+", -0.05], "desc_change": "-5% Állóképesség fogyasztás"}
+                        ]
+                    }
+                }
+            },
+            "mage": {
+                "name": "Mágia",
+                "description": "Varázserőre és mana-gazdálkodásra épülő fejlesztések.",
+                "skills": {
+                    "increase_mana": {
+                        "name": "Mana",
+                        "description": "Növeli a maximális manát.",
+                        "max_level": 5,
+                        "levels": [
+                            {"cost": 1, "effect": ["max_mana", "+", 10], "desc_change": "+10 Max mana"},
+                            {"cost": 1, "effect": ["max_mana", "+", 15], "desc_change": "+15 Max mana"},
+                            {"cost": 1, "effect": ["max_mana", "+", 20], "desc_change": "+20 Max mana"},
+                            {"cost": 1, "effect": ["max_mana", "+", 25], "desc_change": "+25 Max mana"},
+                            {"cost": 1, "effect": ["max_mana", "+", 30], "desc_change": "+30 Max mana"}
+                        ]
+                    },
+                    "mana_regen_multiplier": {
+                        "name": "Mana regeneráció",
+                        "description": "Gyorsabb mana regeneráció",
+                        "max_level": 10,
+                        "levels": [
+                            {"cost": 1, "effect": ["mana_regen_multiplier", "+", 0.05], "desc_change": "+5% Mana regeneráció"},
+                            {"cost": 1, "effect": ["mana_regen_multiplier", "+", 0.05], "desc_change": "+5% Mana regeneráció"},
+                            {"cost": 1, "effect": ["mana_regen_multiplier", "+", 0.05], "desc_change": "+5% Mana regeneráció"},
+                            {"cost": 1, "effect": ["mana_regen_multiplier", "+", 0.05], "desc_change": "+5% Mana regeneráció"},
+                            {"cost": 1, "effect": ["mana_regen_multiplier", "+", 0.05], "desc_change": "+5% Mana regeneráció"},
+                            {"cost": 1, "effect": ["mana_regen_multiplier", "+", 0.05], "desc_change": "+5% Mana regeneráció"},
+                            {"cost": 1, "effect": ["mana_regen_multiplier", "+", 0.05], "desc_change": "+5% Mana regeneráció"},
+                            {"cost": 1, "effect": ["mana_regen_multiplier", "+", 0.05], "desc_change": "+5% Mana regeneráció"},
+                            {"cost": 1, "effect": ["mana_regen_multiplier", "+", 0.05], "desc_change": "+5% Mana regeneráció"},
+                            {"cost": 1, "effect": ["mana_regen_multiplier", "+", 0.05], "desc_change": "+5% Mana regeneráció"}
+                        ]
+                    },
+                    "increase_magic_damage_multiplier": {
+                        "name": "Mágikus sebzés",
+                        "description": "Növeli a mágikus fegyverek sebzését.",
+                        "max_level": 10,
+                        "levels": [
+                            {"cost": 1, "effect": ["magic_damage_multiplier", "+", 0.05], "desc_change": "+5% Mágikus sebzés"},
+                            {"cost": 1, "effect": ["magic_damage_multiplier", "+", 0.05], "desc_change": "+5% Mágikus sebzés"},
+                            {"cost": 1, "effect": ["magic_damage_multiplier", "+", 0.05], "desc_change": "+5% Mágikus sebzés"},
+                            {"cost": 1, "effect": ["magic_damage_multiplier", "+", 0.05], "desc_change": "+5% Mágikus sebzés"},
+                            {"cost": 1, "effect": ["magic_damage_multiplier", "+", 0.05], "desc_change": "+5% Mágikus sebzés"},
+                            {"cost": 1, "effect": ["magic_damage_multiplier", "+", 0.05], "desc_change": "+5% Mágikus sebzés"},
+                            {"cost": 1, "effect": ["magic_damage_multiplier", "+", 0.05], "desc_change": "+5% Mágikus sebzés"},
+                            {"cost": 1, "effect": ["magic_damage_multiplier", "+", 0.05], "desc_change": "+5% Mágikus sebzés"},
+                            {"cost": 1, "effect": ["magic_damage_multiplier", "+", 0.05], "desc_change": "+5% Mágikus sebzés"},
+                            {"cost": 1, "effect": ["magic_damage_multiplier", "+", 0.05], "desc_change": "+5% Mágikus sebzés"}
+                        ]
+                    },
+                    "decrease_attack_mana_cost_multiplier": {
+                        "name": "Mana fogyasztás",
+                        "description": "Mágikus fegyverek kevesebb manát fogyasztanak.",
+                        "max_level": 10,
+                        "levels": [
+                            {"cost": 1, "effect": ["attack_mana_cost_multiplier", "+", -0.05], "desc_change": "-5% Mana fogyasztás"},
+                            {"cost": 1, "effect": ["attack_mana_cost_multiplier", "+", -0.05], "desc_change": "-5% Mana fogyasztás"},
+                            {"cost": 1, "effect": ["attack_mana_cost_multiplier", "+", -0.05], "desc_change": "-5% Mana fogyasztás"},
+                            {"cost": 1, "effect": ["attack_mana_cost_multiplier", "+", -0.05], "desc_change": "-5% Mana fogyasztás"},
+                            {"cost": 1, "effect": ["attack_mana_cost_multiplier", "+", -0.05], "desc_change": "-5% Mana fogyasztás"},
+                            {"cost": 2, "effect": ["attack_mana_cost_multiplier", "+", -0.05], "desc_change": "-5% Mana fogyasztás"},
+                            {"cost": 2, "effect": ["attack_mana_cost_multiplier", "+", -0.05], "desc_change": "-5% Mana fogyasztás"},
+                            {"cost": 2, "effect": ["attack_mana_cost_multiplier", "+", -0.05], "desc_change": "-5% Mana fogyasztás"},
+                            {"cost": 2, "effect": ["attack_mana_cost_multiplier", "+", -0.05], "desc_change": "-5% Mana fogyasztás"},
+                            {"cost": 2, "effect": ["attack_mana_cost_multiplier", "+", -0.05], "desc_change": "-5% Mana fogyasztás"}
+                        ]
+                    }
+                }
+            },
+            "agility": {
+                "name": "Állóképesség",
+                "description": "Mozgékonyságot és egyéb hasznos képességeket fejleszt.",
+                "skills": {
+                    "increase_stamina": {
+                        "name": "Állóképesség",
+                        "description": "Növeli a maximális állóképességet.",
+                        "max_level": 10,
+                        "levels": [
+                            {"cost": 1, "effect": ["max_stamina", "+", 10], "desc_change": "+10 Max állóképesség"},
+                            {"cost": 1, "effect": ["max_stamina", "+", 10], "desc_change": "+10 Max állóképesség"},
+                            {"cost": 1, "effect": ["max_stamina", "+", 10], "desc_change": "+10 Max állóképesség"},
+                            {"cost": 1, "effect": ["max_stamina", "+", 10], "desc_change": "+10 Max állóképesség"},
+                            {"cost": 1, "effect": ["max_stamina", "+", 10], "desc_change": "+10 Max állóképesség"},
+                            {"cost": 2, "effect": ["max_stamina", "+", 10], "desc_change": "+10 Max állóképesség"},
+                            {"cost": 2, "effect": ["max_stamina", "+", 10], "desc_change": "+10 Max állóképesség"},
+                            {"cost": 2, "effect": ["max_stamina", "+", 10], "desc_change": "+10 Max állóképesség"},
+                            {"cost": 2, "effect": ["max_stamina", "+", 10], "desc_change": "+10 Max állóképesség"},
+                            {"cost": 2, "effect": ["max_stamina", "+", 10], "desc_change": "+10 Max állóképesség"}
+                        ]
+                    },
+                    "stamina_regen_multiplier": {
+                        "name": "Állóképesség regeneráció",
+                        "description": "Gyorsabb állóképesség regeneráció",
+                        "max_level": 10,
+                        "levels": [
+                            {"cost": 1, "effect": ["stamina_regen_multiplier", "+", 0.05], "desc_change": "+5% Állóképesség regeneráció"},
+                            {"cost": 1, "effect": ["stamina_regen_multiplier", "+", 0.05], "desc_change": "+5% Állóképesség regeneráció"},
+                            {"cost": 1, "effect": ["stamina_regen_multiplier", "+", 0.05], "desc_change": "+5% Állóképesség regeneráció"},
+                            {"cost": 1, "effect": ["stamina_regen_multiplier", "+", 0.05], "desc_change": "+5% Állóképesség regeneráció"},
+                            {"cost": 1, "effect": ["stamina_regen_multiplier", "+", 0.05], "desc_change": "+5% Állóképesség regeneráció"},
+                            {"cost": 1, "effect": ["stamina_regen_multiplier", "+", 0.05], "desc_change": "+5% Állóképesség regeneráció"},
+                            {"cost": 1, "effect": ["stamina_regen_multiplier", "+", 0.05], "desc_change": "+5% Állóképesség regeneráció"},
+                            {"cost": 1, "effect": ["stamina_regen_multiplier", "+", 0.05], "desc_change": "+5% Állóképesség regeneráció"},
+                            {"cost": 1, "effect": ["stamina_regen_multiplier", "+", 0.05], "desc_change": "+5% Állóképesség regeneráció"},
+                            {"cost": 1, "effect": ["stamina_regen_multiplier", "+", 0.05], "desc_change": "+5% Állóképesség regeneráció"}
+                        ]
+                    },
+                    "increase_max_weight": {
+                        "name": "Teherbírás",
+                        "description": "Növeli a súlyt, amit elbírsz.",
+                        "max_level": 10,
+                        "levels": [
+                            {"cost": 1, "effect": ["max_weight", "+", 5], "desc_change": "+5 Max súly"},
+                            {"cost": 1, "effect": ["max_weight", "+", 5], "desc_change": "+5 Max súly"},
+                            {"cost": 1, "effect": ["max_weight", "+", 5], "desc_change": "+5 Max súly"},
+                            {"cost": 1, "effect": ["max_weight", "+", 5], "desc_change": "+5 Max súly"},
+                            {"cost": 1, "effect": ["max_weight", "+", 5], "desc_change": "+5 Max súly"},
+                            {"cost": 1, "effect": ["max_weight", "+", 5], "desc_change": "+5 Max súly"},
+                            {"cost": 1, "effect": ["max_weight", "+", 5], "desc_change": "+5 Max súly"},
+                            {"cost": 1, "effect": ["max_weight", "+", 5], "desc_change": "+5 Max súly"},
+                            {"cost": 1, "effect": ["max_weight", "+", 5], "desc_change": "+5 Max súly"},
+                            {"cost": 1, "effect": ["max_weight", "+", 5], "desc_change": "+5 Max súly"}
+                        ]
+                    }      
+                }
+            }
+        }
+    
